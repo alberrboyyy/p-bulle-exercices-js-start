@@ -6,9 +6,7 @@
  * @returns {string} the generated registry number.
  */
 export function randomShipRegistryNumber() {
-  throw new Error(
-    'Please remove this line and implement the randomShipRegistryNumber() function',
-  );
+  return `NCC-${Math.ceil(Math.random() * 10000)}`
 }
 
 /**
@@ -17,9 +15,8 @@ export function randomShipRegistryNumber() {
  * @returns {number} a stardate between 41000 (inclusive) and 42000 (exclusive).
  */
 export function randomStardate() {
-  throw new Error(
-    'Please remove this line and implement the randomStardate() function',
-  );
+  return Math.floor(Math.random() * (42000 - 41000) + 41000);
+  //https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
 }
 
 /**
@@ -28,7 +25,6 @@ export function randomStardate() {
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
-  throw new Error(
-    'Please remove this line and implement the randomStardate() function',
-  );
+const planetClass = ["D", "H", "J", "K", "L", "M", "N", "R", "T", "Y"];
+return planetClass[Math.floor(Math.random() * planetClass.length)]
 }
