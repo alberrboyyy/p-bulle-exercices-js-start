@@ -10,12 +10,11 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-  const Visitor = {
+  return {
   name: name,
   age: age,
   ticketId: ticketId,
-}
-  return Visitor
+  }
 }
 
 /**
@@ -68,10 +67,5 @@ export function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  try {
-    return visitor.gtc.version
-  }
-  catch {
-    return 
-  }
+  return visitor.gtc ? visitor.gtc.version : undefined
 }
