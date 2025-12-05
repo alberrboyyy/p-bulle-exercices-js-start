@@ -4,28 +4,48 @@
 //
 
 export class BankAccount {
+  #balance;
+  #isOpen;
+
   constructor() {
-    throw new Error('Remove this line and implement the function');
+    this.#balance = 0;
+    this.#isOpen = false;
   }
 
   open() {
-    throw new Error('Remove this line and implement the function');
+    if (this.#isOpen){
+      throw new ValueError
+    }
+    this.#isOpen = true;
+    this.#balance = 0;
   }
 
   close() {
-    throw new Error('Remove this line and implement the function');
+    if (!this.#isOpen){
+      throw new ValueError
+    }
+    this.#isOpen = false;
   }
 
-  deposit() {
-    throw new Error('Remove this line and implement the function');
+  deposit(amount) {
+    if (amount < 0 || !this.#isOpen){
+      throw new ValueError
+    }
+    this.#balance += amount;
   }
 
-  withdraw() {
-    throw new Error('Remove this line and implement the function');
+  withdraw(amount) {
+    if (amount < 0 || !this.#isOpen || amount > this.#balance){
+      throw new ValueError
+    }
+    this.#balance -= amount;
   }
 
   get balance() {
-    throw new Error('Remove this line and implement the function');
+    if (!this.#isOpen){
+      throw new ValueError
+    }
+    return this.#balance
   }
 }
 
