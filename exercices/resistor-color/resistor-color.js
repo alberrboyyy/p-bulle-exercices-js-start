@@ -3,8 +3,19 @@
 // convenience to get you started writing code faster.
 //
 
-export const colorCode = () => {
-  throw new Error('Remove this line and implement the function');
+export const colorCode = (colors) => {
+  return COLORS.indexOf(colors);
 };
 
-export const COLORS = undefined;
+export const COLORS = [
+  "black",
+  "brown",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "violet",
+  "grey",
+  "white",
+];
