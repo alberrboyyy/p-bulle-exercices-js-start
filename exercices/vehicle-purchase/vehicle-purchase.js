@@ -54,4 +54,5 @@ export function calculateResellPrice(originalPrice, age) {
   if (age > 10) {
     return originalPrice / 2;
   }
+  return 0;
 }
