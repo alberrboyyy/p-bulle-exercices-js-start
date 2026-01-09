@@ -11,13 +11,7 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  switch (kind) {
-    case "car":
-    case "truck":
-      return true;
-    default:
-      return false;
-  }
+  return kind === "car" || kind === "truck";
 }
 
 /**
@@ -29,11 +23,8 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  if (option1 < option2) {
-    return `${option1} is clearly the better choice.`;
-  } else {
-    return `${option2} is clearly the better choice.`;
-  }
+  const selection = option1 < option2 ? option1 : option2;
+  return `${selection} is clearly the better choice.`;
 }
 
 /**
@@ -48,11 +39,8 @@ export function calculateResellPrice(originalPrice, age) {
   if (age < 3) {
     return originalPrice * 0.8;
   }
-  if (age >= 3 && age <= 10) {
-    return originalPrice * 0.7;
-  }
   if (age > 10) {
     return originalPrice / 2;
   }
-  return 0;
+  return originalPrice * 0.7;
 }
