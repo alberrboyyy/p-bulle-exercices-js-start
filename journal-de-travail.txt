@@ -40,3 +40,4 @@
 
 09/01/2026    08h10    08h40    30m     rna-transcription
 09/01/2026    12h20    13h20    1h00    création du journal de travail
+09/01/2026    13h20    13h50    30m     vehicle-purchase 
